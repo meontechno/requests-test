@@ -1,0 +1,11 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: requests-test-3
+spec:
+  template:
+    spec:
+      containers:
+      - name: requests-test
+        image: meontechno/requests-test:latest
+      restartPolicy: OnFailure
